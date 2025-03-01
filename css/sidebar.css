@@ -1,0 +1,184 @@
+/* Сайдбар: базовые стили */
+.sidebar {
+	width: 250px;
+	background-color: #131A2D;
+	color: #fff;
+	position: fixed;
+	height: 100vh;
+	overflow-y: auto;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+	transition: transform 0.3s;
+	top: 0;
+	padding: 15px;
+	z-index: 1000;
+}
+
+/* Сайдбар: закрыт по умолчанию на экранах до 1400px */
+.sidebar.mobile-closed {
+	transform: translateX(-250px);
+}
+
+/* Сайдбар: открыт при нажатии на бургер */
+.sidebar.active {
+	transform: translateX(0);
+}
+
+/* Сайдбар: открыт на ПК (больше 1400px) */
+.sidebar.desktop-open {
+	transform: translateX(0);
+}
+
+/* Закрываем сайдбар на ПК при нажатии на кнопку */
+.sidebar.closed {
+	transform: translateX(-250px);
+}
+
+/* Стили для логотипа в сайдбаре */
+.sidebar-logo {
+	text-align: left;
+}
+
+.sidebar-logo .logo {
+	width: 50px;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+/* Иконки в меню */
+.icon {
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+	margin-right: 10px;
+}
+
+/* Меню в сайдбаре */
+.sidebar-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	border-radius: 10px;
+	/* background: #1E2943; */
+	padding: 8px;
+}
+
+/* Кнопка-бургер: показываем только на экранах до 1400px */
+.burger {
+	font-size: 20px;
+	position: fixed;
+	top: 15px;
+	left: 10px;
+	cursor: pointer;
+	z-index: 1000;
+	color: #fff;
+	background-color: #1e2430;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: left 0.3s;
+	display: none; /* Скрываем по умолчанию */
+}
+
+/* Показываем бургер только на экранах до 1400px */
+@media (max-width: 1400px) {
+	.burger {
+		 display: block;
+	}
+	.sidebar.desktop-open {
+		 transform: translateX(-250px); /* Скрываем сайдбар на экранах до 1400px */
+	}
+}
+
+/* Перемещение кнопки при открытом сайдбаре на мобильных */
+.burger.active {
+	left: 270px;
+}
+
+/* Скрываем кнопку-бургер на ПК (больше 1400px) */
+@media (min-width: 1401px) {
+	.burger {
+		 display: none;
+	}
+	.sidebar.desktop-open {
+		 transform: translateX(0); /* Показываем сайдбар на ПК */
+	}
+}
+
+/* Стили для значков в меню */
+.icon {
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+}
+
+/* Стили для выпадающего меню */
+.dropdown-menu {
+	display: none;
+	list-style: none;
+	padding-left: 20px;
+	background-color: #2d3647;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.divider {
+	height: 1px;
+	background-color: #2d3647;
+	margin: 10px 0;
+}
+
+/* Скроллбар для сайдбара */
+.sidebar::-webkit-scrollbar {
+	width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+	background-color: #4158B3;
+	border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+	background-color: #1e2430;
+}
+
+/* Скрываем скроллбар на мобильных устройствах */
+@media (max-width: 768px) {
+	.sidebar {
+		 scrollbar-width: none;
+		 -ms-overflow-style: none;
+	}
+
+	.sidebar::-webkit-scrollbar {
+		 display: none;
+	}
+}
+
+.sidebar_menu {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	background: #1E2943;
+	padding: 16px;
+	border-radius:10px;
+}
+
+.sidebar_menu-link a {
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 8px;
+}
+.sidebar_menu-link a:hover {
+	color: var(--primary-color);
+}
+.header_right-btn {
+	display: flex;
+	gap: 20px;
+}
+
+.sidebar_menu-2 {
+	background: #4158B3;
+}

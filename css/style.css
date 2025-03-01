@@ -17,34 +17,25 @@
  }
  
  .container {
-	max-width: 1400px; 
-	width: 100%;
-	margin: 0 auto; 
-	padding: 0 20px; 
+	max-width: 1400px;  /* Максимальная ширина контента */
+    margin: 0 auto;      /* Центрируем по горизонтали */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
  }
- 
- @media (max-width: 1400px) {
+
+ /* Смещаем основной контент вправо, чтобы учесть сайдбар (250px) */
+@media (min-width: 1401px) {
 	.container {
-	  max-width: 1200px;
+		 margin-left: 250px;  /* Ширина сайдбара */
 	}
- }
- 
- @media (max-width: 1200px) {
+}
+
+/* Для экранов до 1400px — контент на всю ширину */
+@media (max-width: 1400px) {
 	.container {
-	  max-width: 1000px;
+		 margin-left: 0;
+		 padding: 20px;
 	}
- }
- 
- @media (max-width: 992px) {
-	.container {
-	  max-width: 750px;
-	}
- }
- 
- @media (max-width: 768px) {
-	.container {
-	  max-width: 100%;
-	  padding: 0 15px;
-	}
- }
+}
  

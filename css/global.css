@@ -1,8 +1,8 @@
 /* 🎨 Общие стили для всего сайта */
 :root {
 	--primary-color: #ffffff;
-	--secondary-color: #F2A100;
-	--bg-color: #161924;
+	--secondary-color: #00A9EC;
+	--bg-color: #00040B;
 	--text-color: #ffffff;
 	--font-family: 'Montserrat', Sans-serif;
 }
@@ -38,13 +38,18 @@ a:hover {
 	border-radius: 5px;
 	transition: 0.3s;
 }
-
-.button:hover {
-	opacity: 0.5;
+@media (max-width: 768px) {
+	.button {
+		padding: 6px 12px;
+		font-size: 14px;
+	}
 }
 
-.container {
-	width: 90%;
-	max-width: 1200px;
-	margin: 0 auto;
+.button:hover {
+	opacity: 0.8;
+	color: var(--primary-color);
+}
+.button_1 {
+	border: #00A9EC solid 1px;
+	background-color: transparent
 }
