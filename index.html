@@ -269,20 +269,27 @@
 			<div class="faq__container container">
 				<div class="faq_title">FAQ</div>
 				<div class="faq-container">
+
 					<details>
-						 <summary>Что такое HTML?</summary>
+						 <summary>Вопрос 1</summary>
 						 <p>HTML (HyperText Markup Language) – это язык разметки, используемый для создания веб-страниц.</p>
 					</details>
-		 
+
 					<details>
-						 <summary>Как работает CSS?</summary>
-						 <p>CSS (Cascading Style Sheets) используется для стилизации HTML-элементов на веб-странице.</p>
-					</details>
-		 
-					<details>
-						 <summary>Что такое JavaScript?</summary>
-						 <p>JavaScript – это язык программирования, который добавляет интерактивность на веб-сайты.</p>
-					</details>
+						<summary>Вопрос 2</summary>
+						<p>HTML (HyperText Markup Language) – это язык разметки, используемый для создания веб-страниц.</p>
+				  </details>
+
+				  <details>
+					<summary>Вопрос 3</summary>
+					<p>HTML (HyperText Markup Language) – это язык разметки, используемый для создания веб-страниц.</p>
+			  </details>
+	
+			  <details>
+				<summary>Вопрос 4</summary>
+				<p>HTML (HyperText Markup Language) – это язык разметки, используемый для создания веб-страниц.</p>
+		  	  </details>		 
+				
 			  </div>
 		 
 			</div>
@@ -302,5 +309,35 @@
     </script>
     <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- chat -->
+<div class="chat-icon">
+	<img src="assets/img/footer/chat.png" alt="Чат" id="chat-toggle">
+</div>
+
+<div class="chat-window" id="chat-window">
+	<div class="chat-header">
+		 <div class="chat-header-title">
+			  <img src="assets/img/footer/chat.png" alt="Профиль" class="profile-icon">
+			  <div>
+					<div class="chat_title">Arkada AI</div>
+					<span class="chat_subtitle">Product Expert</span>
+			  </div>
+		 </div>
+		 <button class="close-btn" id="close-chat">&times;</button>
+	</div>
+	<div class="chat-body">
+		 <p>Приветствуем в нашем сайте.<br>Прежде чем начать чат, заполните форму ниже.</p>
+		 <form class="chat-form">
+			  <label>Имя: *</label>
+			  <input type="text" placeholder="Ваше имя" required>
+			  <label>E-mail: *</label>
+			  <input type="email" placeholder="Ваш e-mail" required>
+			  <button type="submit">Начать чат</button>
+		 </form>
+	</div>
+</div>
+
+
 </body>
 </html>
