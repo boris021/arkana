@@ -38,4 +38,56 @@
 		 padding: 20px;
 	}
 }
- 
+ /* ------------ banner ------------ */
+
+.hero_banner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.banner {
+	width: 50%;
+	height: 300px;
+	border-radius: 10px;
+	padding: 40px;
+	display: flex;
+    justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+}
+.banner_1 {
+	background-image: url('/assets/img/banner/01.webp');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+}
+.banner_span {
+	background-color: #401166;
+	font-size: 10px;
+	padding: 5px 10px;
+	border-radius: 15px;
+	color: #fff;
+	width: fit-content;
+	margin-bottom: 30px;
+}
+.banner_subtitle {
+	font-size: 20px;
+	color: #cd7dfc;
+}
+.banner_title {
+	font-size: 30px;
+	color: #fff;
+	margin-bottom: 15px;
+}
+.banner_btn {
+	background-color: #401166;
+	color: #fff;
+	padding: 12px 24px;
+	border-radius: 10px;
+	font-size: 15px;
+	cursor: pointer;
+	width: fit-content;
+}
