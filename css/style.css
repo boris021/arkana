@@ -124,9 +124,9 @@
 	color: var(--primary-color);
 }
 .item_link{
-	display: inline-block;  /* В ряд, как текст */
-    width: 200px;           /* Ширина каждого элемента */
-    margin-right: 10px;     /* Отступы между элементами */
+	display: inline-block; 
+    width: 200px;          
+    margin-right: 10px;     
 }
 .item_link i {
 	width: 20px;
@@ -141,10 +141,10 @@
 	width: 100%;
 	overflow-x: auto; 
 	white-space: nowrap;
-	overflow-x: scroll;         /* Включаем горизонтальную прокрутку */
-    scrollbar-width: none;      /* Убираем полосу для Firefox */
-    -ms-overflow-style: none;   /* Убираем полосу для IE и старого Edge */
-}
+	overflow-x: scroll;         
+    scrollbar-width: none;     
+    -ms-overflow-style: none;   
+	}
 .item_link a {
 	font-size: 14px;
 	font-weight: 400;
@@ -214,15 +214,15 @@
 	align-items: center;
 	gap: 10px;
 	margin-bottom: 20px;
-	width: 100%;               /* Ширина контейнера */
-    overflow-x: scroll;        /* Включаем горизонтальную прокрутку */
-    scrollbar-width: none;     /* Убираем полосу для Firefox */
-    -ms-overflow-style: none;  /* Убираем полосу для IE и старого Edge */
-    white-space: nowrap;       /* Элементы в одну линию */
+	width: 100%;              
+    overflow-x: scroll;       
+    scrollbar-width: none;     
+    -ms-overflow-style: none;  
+    white-space: nowrap;       
 }
 
 .provaider_item::-webkit-scrollbar {
-	display: none;             /* Убираем полосу для Chrome, Safari и Opera */
+	display: none;             
 }
 .provaider_link  {
 	background-color: var(--fon);
