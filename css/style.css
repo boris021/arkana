@@ -66,7 +66,7 @@
 }
 .banner_1 {
 	position: relative; 
-	background-image: url('assets/img/banner/01.webp');
+	background-image: url('//assets/img/banner/01.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -74,7 +74,7 @@
 }
 
 .banner_2 {
-	background-image: url('assets/img/banner/02.webp');
+	background-image: url('//assets/img/banner/02.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -167,7 +167,7 @@
 	align-content: center;
 	flex-direction: column;
 	justify-content: center;
-	background:url('assets/img/bonus/01.webp'), 
+	background:url('//assets/img/bonus/01.webp'), 
 	linear-gradient(180deg, #414ec9 0%, #2217a5 100%); 
 	background-repeat: no-repeat;     
 	background-size: contain;         
