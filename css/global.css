@@ -4,6 +4,7 @@
 	--secondary-color: #00A9EC;
 	--bg-color: #00040B;
 	--text-color: #ffffff;
+	--fon: #131A2D;
 	--font-family: 'Montserrat', Sans-serif;
 }
 
@@ -18,6 +19,19 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	margin: 0;
+	margin-bottom: 20px;
+	margin-top: 15px;
+}
+h1 {
+	font-size: 36px;
+}
+h2 {
+	font-size: 30px;
+}
+p{
+	color: #ffffffc6;
+	font-size: 14px;
+	line-height: 1.4;
 }
 
 a {

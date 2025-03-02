@@ -54,21 +54,37 @@
 	border-radius: 10px;
 	padding: 40px;
 	display: flex;
-    justify-content: center;
+   justify-content: center;
 	flex-direction: column;
 	gap: 5px;
 }
+@media (max-width: 768px) {
+	.banner {
+		width: 100%;
+		padding: 20px;				
+	}
+}
 .banner_1 {
+	position: relative; 
 	background-image: url('/assets/img/banner/01.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 50%;
+	width: 100%;
+	background-position: center;	
 }
+
 .banner_2 {
 	background-image: url('/assets/img/banner/02.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 50%;
+	width: 100%;
+	background-position: center;
+}
+
+@media (max-width: 768px) {
+	.banner_2 {
+		display: none;		
+	}
 }
 .banner_span {
 	background-color: #401166;
@@ -96,4 +112,186 @@
 	font-size: 15px;
 	cursor: pointer;
 	width: fit-content;
+}
+.hero_link {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	background-color: var(--fon);
+	padding: 20px;
+	border-radius: 10px;
+	color: var(--primary-color);
+}
+.item_link{
+	display: inline-block;  /* В ряд, как текст */
+    width: 200px;           /* Ширина каждого элемента */
+    margin-right: 10px;     /* Отступы между элементами */
+}
+.item_link i {
+	width: 20px;
+	font-size: 14px;
+	color: var(--primary-color);
+}
+.hero_link-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	overflow-x: auto; 
+	white-space: nowrap;
+	overflow-x: scroll;         /* Включаем горизонтальную прокрутку */
+    scrollbar-width: none;      /* Убираем полосу для Firefox */
+    -ms-overflow-style: none;   /* Убираем полосу для IE и старого Edge */
+}
+.item_link a {
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--primary-color);
+}
+.item_link a:hover {
+	color: var(--secondary-color);
+}
+
+/* бонус */
+.bonus_banner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+.bonus {
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	justify-content: center;
+	background:url('/assets/img/bonus/01.webp'), 
+	linear-gradient(180deg, #414ec9 0%, #2217a5 100%); 
+	background-repeat: no-repeat;     
+	background-size: contain;         
+	background-position: right center; 
+	padding: 20px;
+	width: 100%;
+	border-radius: 10px;
+	gap: 10px;
+}
+.bonus_span {
+	background-color: #401166;
+	color: var(--primary-color);
+	font-size: 10px;
+	font-weight: 300;
+	padding: 5px 10px;
+	border-radius: 15px;
+	width: fit-content;
+	margin-bottom: 10px;
+}
+.bonus_title {
+	font-size: 18px;
+	color: var(--primary-color);
+	font-weight: 600;
+	margin-bottom: 18px;
+	width: 60%;
+}
+.bonus_btn {
+	font-size: 12px;
+}
+@media (max-width: 768px) {
+	.bonus_2, .bonus_3 {
+		display: none;	}
+}
+
+/* provaider */
+.provaider_title {
+	font-size: 30px;
+	color: var(--primary-color);
+	margin-bottom: 20px;
+}
+.provaider_item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+	width: 100%;               /* Ширина контейнера */
+    overflow-x: scroll;        /* Включаем горизонтальную прокрутку */
+    scrollbar-width: none;     /* Убираем полосу для Firefox */
+    -ms-overflow-style: none;  /* Убираем полосу для IE и старого Edge */
+    white-space: nowrap;       /* Элементы в одну линию */
+}
+
+.provaider_item::-webkit-scrollbar {
+	display: none;             /* Убираем полосу для Chrome, Safari и Opera */
+}
+.provaider_link  {
+	background-color: var(--fon);
+	padding: 5px 10px;
+	border-radius: 10px;
+}
+.provaider_link img {
+	width: 99px;
+	height: 40px;
+}
+
+/* faq */
+.faq_title {
+	font-size: 30px;
+	color: var(--primary-color);
+}
+.faq p {
+	font-size: 14px;
+}
+.faq-container {
+	width: 100%;
+	margin: 50px auto;
+	font-family: Arial, sans-serif;
+}
+
+/* Стили для вопросов */
+details {
+	margin-bottom: 10px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+summary {
+	background:var(--fon);
+	padding: 15px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	outline: none;
+	transition: background 0.3s ease;
+}
+
+/* При наведении или открытии */
+summary:hover,
+details[open] summary {
+	opacity: 0.7;
+}
+
+/* Стили для ответов */
+details p {
+	padding: 15px;
+	margin: 0;
+	background: var(--fon);
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+/* Анимация открытия */
+details[open] p {
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		 opacity: 0;
+		 transform: translateY(-5px);
+	}
+	to {
+		 opacity: 1;
+		 transform: translateY(0);
+	}
 }

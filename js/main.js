@@ -46,29 +46,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // chat
-const chatToggle = document.getElementById("chat-toggle");
-const chatWindow = document.getElementById("chat-window");
-const closeChat = document.getElementById("close-chat");
+document.addEventListener('DOMContentLoaded', () => {
+	const chatToggle = document.getElementById("chat-toggle");
+	const chatWindow = document.getElementById("chat-window");
+	const closeChat = document.getElementById("close-chat");
 
-// Проверяем, подключился ли скрипт
-console.log("JavaScript подключен!");
+	if (chatToggle && chatWindow && closeChat) {
+		 console.log("Элементы чата найдены!");
 
-// Проверяем клики
-chatToggle.addEventListener("click", () => {
-    console.log("Иконка нажата!");
-    chatWindow.style.display = "block";
+		 chatToggle.addEventListener("click", () => {
+			  console.log("Иконка нажата!");
+			  chatWindow.classList.toggle("active"); // Меняем класс вместо display
+		 });
+
+		 closeChat.addEventListener("click", () => {
+			  console.log("Закрытие чата!");
+			  chatWindow.classList.remove("active"); // Убираем класс
+		 });
+
+		 document.addEventListener("click", (event) => {
+			  if (!chatWindow.contains(event.target) && !chatToggle.contains(event.target)) {
+					chatWindow.classList.remove("active"); // Закрываем чат при клике вне
+					console.log("Чат закрыт по клику вне области!");
+			  }
+		 });
+	} else {
+		 console.error("❌ Не удалось найти элементы чата!");
+	}
 });
-
-closeChat.addEventListener("click", () => {
-    console.log("Закрытие чата!");
-    chatWindow.style.display = "none";
-});
-
-// Закрытие окна чата при клике вне его области
-document.addEventListener("click", (event) => {
-    if (!chatWindow.contains(event.target) && !chatToggle.contains(event.target)) {
-        chatWindow.style.display = "none";
-        console.log("Чат закрыт по клику вне области!");
-    }
-});
-

@@ -29,7 +29,7 @@
 }
 @media (max-width: 1400px) {
 	.header__container-logo img {
-		margin-left: 50px;
+		margin-left: 30px;
 	}
 }
 
@@ -55,3 +55,4 @@
 	.header_right-btn {
 		gap: 10px;	}
 }
+

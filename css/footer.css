@@ -205,3 +205,14 @@
 .chat-form button:hover {
 	background-color: #0056b3;
 }
+
+#chat-window {
+	display: none;          /* По умолчанию скрыто */
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out; /* Плавное появление */
+}
+
+#chat-window.active {
+	display: block;         /* Показываем, если есть класс .active */
+	opacity: 1;             /* Прозрачность 100% */
+}
