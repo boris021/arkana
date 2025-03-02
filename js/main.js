@@ -1,7 +1,7 @@
 // sidebar
 document.addEventListener('DOMContentLoaded', () => {
 	// Загружаем сайдбар через fetch
-	fetch('/components/sidebar.html')
+	fetch('components/sidebar.html')
 		 .then(response => response.text())
 		 .then(data => {
 			  document.getElementById('sidebar-container').innerHTML = data;

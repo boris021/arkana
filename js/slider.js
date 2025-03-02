@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		 }
 
 		 try {
-			  const response = await fetch('/components/slider.html');
+			  const response = await fetch('components/slider.html');
 			  if (!response.ok) throw new Error(`Ошибка загрузки slider.html: ${response.status}`);
 			  
 			  const html = await response.text();
