@@ -62,7 +62,13 @@
 	background-image: url('/assets/img/banner/01.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 100%;
+	width: 50%;
+}
+.banner_2 {
+	background-image: url('/assets/img/banner/02.webp');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 50%;
 }
 .banner_span {
 	background-color: #401166;
