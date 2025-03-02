@@ -1,0 +1,207 @@
+.footer_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: 40px;
+}
+.footer_row-1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 40px;
+}
+@media (max-width: 768px) {
+	.footer_row-1 {
+		align-items: start;
+		flex-direction: column;
+		gap: 20px;
+	}
+}
+.footer_left {
+	width: 35%;
+}
+
+.footer_right {
+	width: 65%;
+}
+@media (max-width: 768px) {
+	.footer_left, .footer_right {
+		width: 100%;
+	}
+}
+.left_block-logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.left_block-logo img {
+	width: 200px;
+	margin-right: 20px;
+}
+.footer_logo-text {
+	font-size: 12px;
+	font-weight: 500;
+	color: var(--primary-color);
+	text-align: center;
+	background-color: var(--secondary-color);
+	padding: 8px 16px;
+	border-radius: 8px;
+}
+.footer_logo-text:hover {
+	color: var(--text-color);
+}
+.footer_right {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	flex-direction: row;
+	gap: 20px;
+}
+@media (max-width: 458px) {
+	.footer_right {
+		flex-direction: column;		
+		width: 100%;
+	}
+}
+.footer_menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 11px;
+	width: 33%;
+	line-height: 1.4;
+}
+@media (max-width: 458px) {
+	.footer_menu {	
+		width: 100%;
+	}
+}
+
+.footer_menu a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+.footer_menu a:hover {
+	opacity: 0.7;
+}
+.footer_row-2 p {
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+/*-------------------------------------- chat --------------------------------------*/
+/* Иконка чата в правом углу */
+.chat-icon {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+.chat-icon img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s;
+}
+
+.chat-icon img:hover {
+	transform: scale(1.1);
+}
+
+/* Окно чата */
+.chat-window {
+	position: fixed;
+	bottom: 100px;
+	right: 30px;
+	width: 300px;
+	background-color: #1e1e1e;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	display: none;
+	z-index: 999;
+	animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-header {
+	background-color: #111;
+	color: #fff;
+	padding: 30px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 10px 10px 0 0;
+}
+
+.chat-header-title {
+	display: flex;
+	align-items: center;
+}
+
+.profile-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.close-btn {
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.chat-body {
+	padding: 20px 15px;
+	color: #fff;
+}
+.chat-body p {
+	margin: 0 0 20px 0;
+	font-size: 14px;
+}
+
+.chat-form label {
+	color: #fff;
+	font-size: 14px;
+}
+
+.chat-form input {
+	margin-top: 10px;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #555;
+	border-radius: 5px;
+	background-color: #333;
+	color: #fff;
+}
+
+.chat-form button {
+	margin-top: 10px;
+	width: 50%;
+	padding: 10px 16px;
+	border: none;
+	border-radius: 5px;
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.chat-form button:hover {
+	background-color: #0056b3;
+}

@@ -44,3 +44,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		 })
 		 .catch(error => console.error("Ошибка загрузки сайдбара:", error));
 });
+
+// chat
+const chatToggle = document.getElementById("chat-toggle");
+const chatWindow = document.getElementById("chat-window");
+const closeChat = document.getElementById("close-chat");
+
+// Проверяем, подключился ли скрипт
+console.log("JavaScript подключен!");
+
+// Проверяем клики
+chatToggle.addEventListener("click", () => {
+    console.log("Иконка нажата!");
+    chatWindow.style.display = "block";
+});
+
+closeChat.addEventListener("click", () => {
+    console.log("Закрытие чата!");
+    chatWindow.style.display = "none";
+});
+
+// Закрытие окна чата при клике вне его области
+document.addEventListener("click", (event) => {
+    if (!chatWindow.contains(event.target) && !chatToggle.contains(event.target)) {
+        chatWindow.style.display = "none";
+        console.log("Чат закрыт по клику вне области!");
+    }
+});
+
