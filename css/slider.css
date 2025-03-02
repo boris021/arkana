@@ -1,7 +1,8 @@
 .slider-container {
 	position: relative;
 	max-width: 100%;
-	padding: 40px 0;
+	padding: 20px 0;
+	margin-bottom: 20px;
 }
 @media (max-width: 768px) {
 	.slider-container {		

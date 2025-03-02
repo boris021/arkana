@@ -74,3 +74,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		 console.error("❌ Не удалось найти элементы чата!");
 	}
 });
+
+
+// tabs
+const tabItems = document.querySelectorAll('.tab-item');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Убираем активные классы
+        tabItems.forEach(i => i.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+
+        // Добавляем активный класс к текущей вкладке
+        item.classList.add('active');
+        const tabId = item.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+    });
+});
