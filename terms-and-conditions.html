@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkadacasino</title>
-    <meta name="description" content="**Arkadacasino** — это онлайн-казино, предлагающее широкий выбор азартных игр, включая слоты, настольные игры и живое казино с реальными дилерами. Платформа ориентирована на удобство пользователей и обеспечивает безопасные финансовые транзакции, щедрые бонусы и круглосуточную поддержку. Благодаря современному дизайну и адаптивному интерфейсу, Arkadacasino предлагает захватывающий игровой опыт как на компьютерах, так и на мобильных устройствах.">
-    <meta name="author" content="Arkadacasino">
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-   
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/slider.css"> 
+    <title>Условия и положения</title>
+	 <script>
+		// Загружаем head.html и ждём завершения
+		fetch('components/head.html')
+			 .then(response => response.text())
+			 .then(data => {
+				  document.head.innerHTML += data; // Вставляем в <head>
 
-    <!-- Подключаем jQuery выше всех скриптов, которые могут его использовать -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-    <!-- Скрипты с defer для отложенной загрузки -->
-    <script src="js/header.js" defer></script>
-    <script src="js/global-link.js" defer></script>
-    <script src="js/footer.js" defer></script>
-    <script src="js/slider.js" defer></script>
+				  // После загрузки head.html — загружаем шапку
+				  fetch('components/header.html')
+						.then(response => response.text())
+						.then(headerData => {
+							 document.getElementById('header').innerHTML = headerData;
+						})
+						.catch(error => console.error('Ошибка загрузки header.html:', error));
+			 })
+			 .catch(error => console.error('Ошибка загрузки head.html:', error));
+  </script>
+ 	<script src="js/header.js" defer></script>
+ 	<script src="js/global-link.js" defer></script>
+	<script src="js/footer.js" defer></script>
+	<script src="js/slider.js" defer></script>
 </head>
 <body>
 
