@@ -126,7 +126,7 @@
 }
 .item_link{
 	display: inline-block; 
-    width: 200px;          
+    width: auto;          
     margin-right: 10px;     
 }
 .item_link i {
